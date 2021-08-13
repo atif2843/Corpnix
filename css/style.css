@@ -115,7 +115,6 @@ img
 {
 	padding: 40px 25px;
 	text-align: left;
-	background: rgba(0, 0, 0, 0.5);
 	text-align: center;
 }
 
@@ -208,6 +207,8 @@ img
 		.socialmedia_container{
 			display: flex;
 			justify-content: space-around;
+			flex-wrap: wrap;
+			
 		}
 		#socialmedia ul
 		{
@@ -219,12 +220,18 @@ img
 			{
 				display: flex;
 				list-style-type: none;
-				
+				align-items: center;
 				padding: 0;
+			}
+			#socialmedia ul li a
+			{
+				text-transform: none;
+				color: black;
+				text-decoration: none;
 			}
 
 				
-				#socialmedia ul li a img{
+				#socialmedia ul li img{
 					height: 5rem;
 				}
 				
@@ -239,9 +246,15 @@ img
    Responsive Media Queries - Tablets
 ================================================== */
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 873px)
 {
 	
+	#socialmedia:nth-child(2){
+		margin-top: 3rem;
+    	display: flex;
+    	width: 100%;
+    	justify-content: center;
+	}
 	#outercont #innercont
 	{
 		padding: 25px;

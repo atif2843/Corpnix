@@ -3,6 +3,18 @@
 ================================================== */
 
 @import url("reset.css");
+@font-face {
+	font-family: OpenSans-SemiBold;
+	src: url(../css/fonts/fontawesome/OpenSans-SemiBold.ttf);
+}
+@font-face {
+	font-family: OpenSans-Regular;
+	src: url(../css/fonts/fontawesome/OpenSans-Regular.ttf);
+}
+@font-face {
+	font-family: OpenSans-LightItalic;
+	src: url(../css/fonts/fontawesome/OpenSans-LightItalic.ttf);
+}
 
 /* ==================================================
    Icon Fonts
@@ -32,6 +44,7 @@ html, body
 {
 	margin: 0;
 	padding: 0;
+	font-size: 62.5%;
 	width: 100%;
 	height: 100%;
 	display: table;
@@ -41,9 +54,7 @@ html
 {
 	height: 100%;
 	overflow: auto;
-	background: #FFF url("../images/bg.jpg") no-repeat;
-	background-size: cover;
-	
+	background: #fff;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -51,36 +62,17 @@ html
 
 body
 {
-	font-family: "Roboto Condensed", Arial, Verdana, Helvetica, sans-serif;
+	font-family: "OpenSans-Regular";
 	font-size: 20px;
-	color: #FFF;
 	line-height: 32px;
 	font-weight: 300;
-	
 	text-rendering: optimizeLegibility;
 	vertical-align: baseline;
-}
-
-::selection
-{
-	background: #ED309C;
-	color: #FFF;
 }
 
 ::-moz-selection
 {
 	background: #ED309C;
-	color: #FFF;
-}
-
-a
-{
-	color: #ED309C;
-	text-decoration: none;
-}
-
-a:hover
-{
 	color: #FFF;
 }
 
@@ -129,7 +121,7 @@ img
 
 	#content p
 	{
-		margin: 0 0 20px 0;
+		margin: 0 0 2rem 0;
 	}
 	
 		#content p:last-child
@@ -148,21 +140,32 @@ img
 	}
 	
 		/** Main Header **/
-		
 		#content h1
 		{
 			display: inline-block;
 			color: #FFF;
-			font-size: 60px;
+			font-size: 4.5rem;
 			line-height: 60px;
 			font-weight: 700;
 			letter-spacing: -0.6px;
-			font-family: "Roboto Condensed";
-			text-transform: uppercase;
-			margin: 0 0 25px 0;
-			padding: 10px 16px;
-			background: #ED309C;
+			font-family: "OpenSans-SemiBold";
+			margin: 0px 0px 2.5rem 3rem;
+			padding: 2rem 8rem 2rem 2rem; 
+			background-image: url(../images/Asset_8.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-origin: padding-box;
+			background-position-y:2vh;
+			text-align: center;
 		}
+		#content img
+		{
+			display: block;
+			margin: 0 auto;
+			padding: 10px 16px;
+			height: 14rem;
+		}
+		
 	
 		/** Countdown Timer **/
 		
@@ -188,7 +191,7 @@ img
 					font-size: 58px;
 					line-height: 58px;
 					font-weight: 700;
-					color: #FFF;
+					
 					font-family: "Roboto Condensed";
 				}
 
@@ -202,23 +205,27 @@ img
 				}
 
 		/** Social Media **/
-		
+		.socialmedia_container{
+			display: flex;
+			justify-content: space-around;
+		}
 		#socialmedia ul
 		{
 			margin: 0;
+			display: flex;
 		}
 
 			#socialmedia ul li
 			{
-				display: inline-block;
+				display: flex;
 				list-style-type: none;
-				margin: 0 12px 0 0;
+				
 				padding: 0;
 			}
 
-				#socialmedia ul li a
-				{
-					font-size: 27px;
+				
+				#socialmedia ul li a img{
+					height: 5rem;
 				}
 				
 #copyright
@@ -247,7 +254,7 @@ img
 	
 		#content h1
 		{
-			font-size: 40px;
+			
 			line-height: 50px;
 		}
 	

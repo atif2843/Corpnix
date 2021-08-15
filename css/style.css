@@ -145,9 +145,9 @@ img
 			color: #FFF;
 			font-size: 4.5rem;
 			line-height: 60px;
-			font-weight: 700;
+			
 			letter-spacing: -0.6px;
-			font-family: "OpenSans-SemiBold";
+			font-family: "OpenSans-Regular";
 			margin: 0px 0px 2.5rem 3rem;
 			padding: 2rem 8rem 2rem 2rem; 
 			background-image: url(../images/Asset_8.png);
@@ -196,7 +196,7 @@ img
 
 				#countdowncont ul#countscript li p
 				{
-					color: rgba(255, 255, 255, 0.6);
+					color: rgba(0, 0, 0, 0.6);
 					text-transform: uppercase;
 					font-size: 16px;
 					line-height: 16px;
@@ -208,6 +208,7 @@ img
 			display: flex;
 			justify-content: space-around;
 			flex-wrap: wrap;
+			margin-top: 5rem;
 			
 		}
 		#socialmedia ul
@@ -240,6 +241,40 @@ img
 	padding: 20px 0 0 0;
 	text-align: center;
 	font-size: 18px;
+}
+.wrapper form input[type="text"]::placeholder{
+	color: rgba(22, 21, 21, 0.575);
+	font-style: italic;
+	font-family: "OpenSans-LightItalic";
+}
+.wrapper{
+	display: flex;
+    justify-content: center;
+}
+.wrapper form{
+	width: 70%;
+	display: flex;
+	font-size: 3rem;
+}
+.wrapper form input[type="text"]{
+	width: 70%;
+	border: 1px solid rgba(10, 10, 10, 0.479);
+	outline: none;
+	font-size: 2rem;
+	padding: 1rem 1rem;
+	border-right: transparent;
+	font-family: "OpenSans-Regular";
+}
+.wrapper form input[type="button"]{
+	width: 30%;
+	padding: 1rem 1rem;
+	font-size: 2rem;
+	border: 1px solid rgba(10, 10, 10, 0.479);
+	outline: none;
+	font-family: "OpenSans-Regular";
+	background: #e62e2d;
+	color: white;
+	cursor: pointer;
 }
 
 /* ==================================================
@@ -285,14 +320,30 @@ img
 			}
 	
 }
+#socialmedia ul{
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 
 /* ==================================================
    Responsive Media Queries - Mobiles
 ================================================== */
+@media screen and (max-width: 873px){
+	#content h1{
+		font-size: 3rem;
+		background-position-y: 3vh;
+		margin: 0;
 
+	}
+	
+}
 @media screen and (max-width: 480px)
 {		
 	
+	.wrapper form{
+		width: 100%;
+	}
 	#outercont #innercont
 	{
 		padding: 15px;
@@ -314,6 +365,12 @@ img
 			{
 				font-size: 16px;
 				line-height: 16px;
+			}
+			#content h1{
+				font-size: 2rem;
+				background-position-y: 4vh;
+				margin: 0;
+
 			}
 	
 }

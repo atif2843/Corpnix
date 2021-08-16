@@ -139,24 +139,21 @@ img
 	}
 	
 		/** Main Header **/
-		#content h1
-		{
-			display: inline-block;
-			color: #FFF;
-			font-size: 4.5rem;
-			line-height: 60px;
-			
-			letter-spacing: -0.6px;
-			font-family: "OpenSans-Regular";
-			margin: 0px 0px 2.5rem 3rem;
-			padding: 2rem 8rem 2rem 2rem; 
-			background-image: url(../images/Asset_8.png);
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-origin: padding-box;
-			background-position-y:2vh;
+		
+		.container {
+			position: relative;
 			text-align: center;
-		}
+			color: white;
+		  }
+		  .centered {
+			position: absolute;
+			top: 45%;
+			left: 45%;
+			transform: translate(-50%, -50%);
+			font-size: 2.5em;
+			width: 100%;
+			}
+		
 		#content img
 		{
 			display: block;
@@ -300,12 +297,6 @@ img
 		padding: 25px;
 	}
 	
-		#content h1
-		{
-			
-			line-height: 50px;
-		}
-	
 		/** Countdown Timer **/
 		
 		#countdowncont
@@ -332,13 +323,12 @@ img
 @media screen and (max-width: 873px){
 	#content h1{
 		font-size: 3rem;
-		background-position-y: 2.5vh;
-		margin: 0;
+		
 
 	}
 	
 }
-@media screen and (max-width: 480px)
+@media screen and (max-width: 532px)
 {		
 	
 	.wrapper form{
@@ -368,8 +358,7 @@ img
 			}
 			#content h1{
 				font-size: 2.2rem;
-				background-position-y: 2.6vh;
-				margin: 0;
+				top: 47%;
 			}
 	
 }

@@ -85,8 +85,8 @@
 		<div class="notifyme_container">
 			<div class="wrapper">
 				<form action="">
-					<input type="text" placeholder="Enter your email here">
-					<input type="button" value="Notify Me">
+					<input type="text" placeholder="Enter your email here" id="email">
+					<input type="button" value="Notify Me" id="button1">
 				</form>
 			</div>
 		</div>
@@ -97,7 +97,23 @@
 			<p>Agence web <a title="ITtroops" href="http://www.dimsolution.com" rel="external">Dim'Solution</a></p>
 			
 		</div> -->
+	<script>
+		$( document ).ready(function() {
+	 
+	$("#button1").click(function () {
+	var a =$("#email").val(); 
+      $.ajax({
+        url: "demo.php",
+        type: "POST",
+        data : {a : emailid },
+        success: function(data){
+          console.log(data); 
+        }
+      });
+    });
 
+	});
+	</script>
 	</div>
 </div>
    

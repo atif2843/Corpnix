@@ -291,6 +291,16 @@ img
 	{
 		padding: 25px;
 	}
+	.notifyme_container:nth-child(1){
+		margin-top: 5rem;
+	}
+	.wrapper a{
+		text-decoration: none;
+		color: inherit;
+	}
+	.Register_me{
+		margin: 3rem 0;
+	}
 	
 	#content
 	{
@@ -306,7 +316,7 @@ img
 		
 			#countdowncont ul#countscript li
 			{
-				width: 50%;
+				
 				padding: 10px 0;
 			}
 	

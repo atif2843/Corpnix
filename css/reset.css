@@ -62,9 +62,6 @@ table
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* close commented backslash hack */
-{
-	height:1%;
-}
 
 .clearfix
 {

@@ -1,0 +1,70 @@
+@use "../bs-override" as *;
+@use "mixins" as *;
+
+
+.display-2--title {
+    font-size: 2.5rem;
+    @include media-breakpoint-up(lg) {
+        font-size: 4rem;
+    }
+    font-weight: 700;
+    display: inline-block;
+}
+.display-2--description {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    @include media-breakpoint-up(md) {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.heading-line {
+    &::before {
+        content: "";
+        width: 12rem;
+        height: 0.1rem;
+        background-color: $primary;
+        display: block;
+        margin: 0 auto;
+    }
+    &::after {
+        content: "";
+        width: 3rem;
+        height: 0.4rem;
+        background-color: $primary;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+// Borders
+
+.border-right {
+    border-right: 2px solid #ddd;
+}
+
+
+
+// Gradiant
+
+.gradient {
+    @include gradiant;
+}
+@mixin gradient-text {
+    font-weight: 600;
+    font-weight: bold;
+    display: inline-block;
+    background-image: linear-gradient(to right, $primary, $secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-gradient {
+    @include gradient-text;
+}
+

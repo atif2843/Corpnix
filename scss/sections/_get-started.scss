@@ -1,0 +1,45 @@
+@use "../bs-override" as *;
+@use "../components/mixins" as *;
+@use "../components/typography" as *;
+
+.cta {
+    padding-top: 3rem;
+    color: $white;
+    .cta-content {
+        padding: 4rem 3rem;
+
+    }
+
+    .cta-list {
+        // position: relative;
+        // display: block;
+        padding: 0.5rem 0.5rem 0 0;
+        list-style-type: none;
+
+        .cta-list-item::before {
+            font-family: "Font Awesome 6 Free";
+            content: "\f00c";
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            font-weight: 600;
+        }
+    }
+
+    .cta-form {
+        width: 100%;
+        height: 100%;
+        padding: 4rem 3rem;
+        
+        input {
+            font-size: 1rem;
+        }
+
+
+    }
+
+
+}
+
+
+
+

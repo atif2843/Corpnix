@@ -1,0 +1,37 @@
+@use "../bs-override" as *;
+@use "mixins" as *;
+
+.btn-rounded {
+  padding: 0.975rem 4rem 0.975rem 1rem;
+  position: relative;
+  border: 1px solid rgba($color: #fff, $alpha: 0.6);
+  background-color: $white;
+  font-weight: 700;
+
+  span {
+    @include gradiant;
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 50%;
+    right: 1rem;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    i {
+      color: $white;
+      font-size: 1rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  &:hover {
+    border-color: $primary;
+    background-color: $primary;
+    color: $white;
+
+    & span {
+      background: rgba(#000, 0.5) !important;
+    }
+  }
+}

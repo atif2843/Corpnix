@@ -1,0 +1,12 @@
+
+@keyframes border-animated {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

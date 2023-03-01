@@ -1,0 +1,44 @@
+@use "../bs-override" as *;
+@use "../components/mixins" as *;
+
+#intro {
+    @include gradiant;
+    padding: 10rem 0 0 0;
+    width: 100%;
+    height: 100%;
+
+    
+
+    .video-box {
+        position: relative;
+
+        a {
+            @include absoluteCenter;
+            i {
+                font-size: 6rem;
+                color: $secondary;
+            }
+        }
+    }
+    
+}
+
+.border-animation {
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 6rem;
+    height: 6rem;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    animation: 1.5s border-animated linear infinite;
+
+    &--1 {
+        animation-delay: 1s;
+    }
+    &--2 {
+        animation-delay: 1.5s;
+    }
+}
+
+

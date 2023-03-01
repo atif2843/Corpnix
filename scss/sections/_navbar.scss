@@ -1,0 +1,53 @@
+@use "../bs-override" as *;
+@use "../components/mixins" as *;
+
+
+.menu {
+    @include gradiant;
+
+    li {
+        padding: 0.9rem;
+
+        a {
+            font-weight: 600;
+            font-size: 1rem;
+            color: $white;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        
+        & div {
+            width: 30px;
+            height: 2px;
+            background-color: $white;
+            border-radius: .5rem;
+            transition: 400ms;   
+        }
+        & div:nth-child(2) {
+            width: 37px;
+        }
+        & div:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+        &.cross {
+            & div:nth-child(1) {
+                transform: rotate(45deg) translate(10px, 8px);
+            }
+            & div:nth-child(2) {
+                opacity: 0;
+            }
+            & div:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -4px);
+            }
+        }
+
+        
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+
+}
+

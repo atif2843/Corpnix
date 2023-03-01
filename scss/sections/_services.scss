@@ -1,0 +1,45 @@
+@use "../bs-override" as *;
+@use "../components/mixins" as *;
+@use "../components/typography" as *;
+
+.services {
+
+
+    .services-description {
+        font-size: .8rem;
+        color: $dark-weight;
+    }
+
+    .services-content {
+        margin-top: 2rem;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+        @include media-breakpoint-up(md) {
+            margin-top: 7rem;
+        }
+        .icon {
+            i {
+                font-size: 2.5rem;
+                color: $primary;
+            }
+        }
+        h5 {
+            font-size: 1.5rem;
+            @include gradient-text;
+        }
+        p {
+            font-size: 0.8rem;
+            color: $dark-weight;
+        }
+    }
+
+    .services-pic {
+        img {
+            width: 100%;
+        }
+    }
+
+}
+

@@ -1,0 +1,96 @@
+@use "../bs-override" as *;
+
+.footer {
+    padding-top: 2rem;
+    background-color: $footer;
+
+    .contact-box {
+
+        .icon {
+            i {
+                font-size: 2rem;
+                color: $primary;
+                margin-right: 1rem;
+            
+            @include media-breakpoint-up(sm) {
+                font-size: 3rem;
+            }
+            }
+        }
+        .contact {
+            a {
+                display: block;
+                text-decoration: none;
+                font-size: 1rem;
+                color: $white;
+
+                @include media-breakpoint-up(sm) {
+                    font-size: 1.2rem;
+                }
+            }
+            p {
+                color: #444;
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+    .social-media-container {
+        background-color: #333;
+        padding-top: 1.5rem;
+
+        .social-media-icons {
+            a {
+                text-decoration: none;
+                color: $white;
+                margin-left: 1rem;
+                i {
+                    font-size: 1.5rem;
+                }
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+    }
+
+    .bg-dark-gray {
+        background-color: #151414;
+    }
+    .company-info {
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            li {
+                a {
+                    font-size: 1rem;
+                    text-decoration: none;
+                    color: $white;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .footer-copyright {
+        color: #777;
+
+        a {
+            color: $white;
+            text-decoration: none;
+
+            &:hover {
+                color: $primary;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+

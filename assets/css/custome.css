@@ -1,0 +1,11 @@
+.services .services-content ul li::marker{
+    content: '>';
+    font-size: 18px;
+    color: rgba(34, 49, 227, 0.95);
+    font-weight: bold;
+}
+.services .services-content ul li p span{
+    position: relative;
+    top: -2px;
+    left: 4px;
+}

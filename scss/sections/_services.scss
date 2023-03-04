@@ -14,10 +14,10 @@
         margin-top: 2rem;
 
         @include media-breakpoint-down(md) {
-            text-align: center;
+            text-align: left;
         }
         @include media-breakpoint-up(md) {
-            margin-top: 7rem;
+            margin-top: 2rem;
         }
         .icon {
             i {

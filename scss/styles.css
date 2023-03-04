@@ -9969,12 +9969,12 @@ textarea.form-control-lg {
 }
 @media (max-width: 767.98px) {
   .services .services-content {
-    text-align: center;
+    text-align: left;
   }
 }
 @media (min-width: 768px) {
   .services .services-content {
-    margin-top: 7rem;
+    margin-top: 2rem;
   }
 }
 .services .services-content .icon i {

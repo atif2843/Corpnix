@@ -787,7 +787,7 @@
             <div class="cta-form bg-light shadow-lg">
               <h3 class="text-gradient">Start Your Project</h3>
               <div class="form mt-4">
-                <form method="post" autocomplete="off" name="google-sheet" class="row">
+                <form method="post" name="enquiries" class="row">
                   <div class="col-md-6 col-lg-6 mb-2">
                     <input type="text" class="form-control form-control-lg shadow" placeholder="First Name" name="first_name" id="first_name">
                   </div>
@@ -810,16 +810,25 @@
                   </div>
                 </form>
                 <script>
-                  const scriptURL = 'https://script.google.com/macros/s/AKfycbw3cIxPIqJk2Fa6DtNpPUGnB-H3bffoPOPxnN4OuHmpGKCryJI51fxUsQeQnLmZ73UmDQ/exec'
-                  const form = document.forms['google-sheet']
-
-                  form.addEventListener('submit', e => {
-                    e.preventDefault()
-                    fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
-                      .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-                      .catch(error => console.error('Error!', error.message))
-                  })
-                </script>
+                  const scriptURL = 'https://script.google.com/macros/s/AKfycbx7BVgfcvuu-QdgraXEUTTDtNOCj-Hd6V-sfkgA2XOzuxP0F_Jh7acCL9fabKMkc8EMPQ/exec';
+            const form = document.forms['enquiries'];
+            
+            form.addEventListener('submit', e => {
+              e.preventDefault();
+              fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                  if (response.ok) {
+                    alert("Thank you! Your form has been submitted successfully.");
+                    window.location.reload();
+                  } else {
+                    throw new Error("Network response was not ok.");
+                  }
+                })
+                .catch(error => {
+                  console.error('Error!', error.message);
+                });
+            });
+                  </script>
               </div>
             </div>
           </div>
